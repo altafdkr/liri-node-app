@@ -55,7 +55,7 @@ function spotifyTrack(songName){
 
 function movie(movieName){
     request("http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy", function (err, res, result){
-            var body = JSON.parse(body);
+            var result = JSON.parse(result);
             console.log("Movie Name: " + result.Title);
             console.log("Movie Release Year: " + result.Year);
             console.log("Rotten Rating: " + result.Ratings[1].Value);
